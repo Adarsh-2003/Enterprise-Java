@@ -1,0 +1,6 @@
+create database login;
+use login;
+create table user(username varchar(20) PRIMARY KEY, password varchar(20), email varchar(20), 
+country varchar(20));
+insert into user values ('admin','admin','admin@admin.com','India');
+select * from user;

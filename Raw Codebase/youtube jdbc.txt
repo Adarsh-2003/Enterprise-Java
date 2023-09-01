@@ -1,0 +1,49 @@
+// youtube jdbc
+import java.util.Scanner;
+import java.sql.*;
+public class MySQL_insert{
+public static void main(String[] args)
+{
+
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter rollno :");
+int rollno = sc.nextInt();
+System.out.print("Enter name :");
+String name = sc.next();
+System.out.print("Enter gender :");
+String gender = sc.next();
+System.out.print("Enter Address :");
+String address = sc.next();
+
+try{
+
+// load driver
+Class.forName("com.mysql.jdbc.Driver";
+
+// create connection
+Connection con = DriverManager.getConnection(link,username,password);
+
+// prepare statement
+PreparedStatement ps = con.prepareStatement("insert into values(?,?,?,?)");
+ps.setInt(1,name);
+ps.setInt(2,rollno);
+ps.setInt(3,gender);
+ps.setInt(4,address);
+
+// fire sql query
+int z = ps.executeUpdate();
+if(z>0)
+{
+System.out.println("Record saved successfully");
+}
+else{
+System.out.println("Record could not be saved");
+}
+// close connection
+con.close();
+}
+catch(Exception e){
+System.out.println(e);
+}
+}
+}

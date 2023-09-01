@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Uploading a File</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="FileUploadServlet" method="post" enctype="multipart/form-data">
+            Select a File to Upload <input type="file" name="file" id="file">
+            Destination <input type="text" value="E:\maths" name="destination"><br/>
+            <input type="submit" value="Upload File" name="upload" id="upload">
+        </form>
+    </body>
+</html>
