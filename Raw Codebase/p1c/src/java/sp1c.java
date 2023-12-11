@@ -2,10 +2,10 @@ import java.io.*;
 import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+
 public class sp1c extends HttpServlet {
 @Override
-public void doGet(HttpServletRequest request, HttpServletResponse response)
- throws ServletException, IOException {
+public void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
  response.setContentType("text/html;charset=UTF-8");
  PrintWriter out = response.getWriter();
  String id = request.getParameter("txtName");
@@ -13,6 +13,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
  String em = request.getParameter("txtEmail");
  String co = request.getParameter("txtCountry");
 String url = "jdbc:mysql://localhost:3306/login";
+
  try
 {
  Class.forName("com.mysql.jdbc.Driver");

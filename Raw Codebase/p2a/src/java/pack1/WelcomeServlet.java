@@ -11,6 +11,7 @@ public class WelcomeServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out= response.getWriter();
+        
         String n=request.getParameter("UserName");
         out.print("Welcome " + n);
         
